@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import DetailEvent from '../components/DetailEvent';
 import DetailExhibitor from '../components/DetailExhibitor';
+import DetailProduct from '../components/DetailProduct';
 
 export default function DetailView(props) {
   const paramIdEvent  = props.route.params.idEvent;
-  const paramIdExhibitor = props.route.params.idExhibitor
-  console.log(paramIdEvent, paramIdExhibitor)
+  const paramIdExhibitor = props.route.params.idExhibitor;
+  const paramIdProduct = props.route.params.idProduct;
+  console.log(paramIdEvent, paramIdExhibitor, paramIdProduct)
   if(paramIdEvent){
 
     return (
@@ -21,6 +23,16 @@ if(paramIdExhibitor){
   </View>  
 );
 }
+
+if(paramIdProduct){
+  return (
+    <View style={styles.container}>
+      <DetailProduct idExhibitor={paramIdProduct}></DetailProduct>
+  </View>  
+);
+}
+
+
 }
 const styles = StyleSheet.create({
   container: {

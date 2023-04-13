@@ -38,7 +38,7 @@ export default function ProductList(props) {
             <View style={styles.item}>
               <Text style={styles.nameProduct}>{item.nameProduct}</Text>
             </View>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate("Detail", { idProduct: item.idProduct })}>
               <Text style={styles.buttonText}>En savoir plus</Text>
             </TouchableOpacity>
           </TouchableOpacity>
