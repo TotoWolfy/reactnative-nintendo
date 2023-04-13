@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { SafeAreaView, ScrollView, Image, StyleSheet, Text } from "react-native";
 import Event from "../Event";
 
+
 export default function DetailEvent(props) {
   console.log(props.idEvent)
   const url = "https://cabrol.alwaysdata.net/api/saeEvent/" + props.idEvent 
@@ -32,7 +33,7 @@ export default function DetailEvent(props) {
     <ScrollView>
       <Image 
         source={ { 
-            uri : "https://image.tmdb.org/t/p/w500" + event.photoEv
+            uri : event.photoEv
         }} 
         style={styles.image}></Image>
      <Text style={styles.title}>{event.title}</Text>
