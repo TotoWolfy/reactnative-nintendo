@@ -8,19 +8,19 @@ export default function AccueilView(props) {
       {/* le logo */}
       <Image
           style={styles.image}
-          source={require('../assets/themoviedb.png')}
+          source={require('../assets/mario.png')}
         />
       {/* la zone de saisie du critere */}
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
           value={text}
-          placeholder="citere de recherche UwU"
+          placeholder="Critère de recherche"
         />
         {/* bouton pour passer à la vue "Films" en lui donnont le critere saisi */}
         <Button 
           color="#24e082"
-	        onPress={ () =>	props.navigation.navigate("Films",{"critere":text})}  title="Rechercher un film">
+	        onPress={ () =>	props.navigation.navigate("Liste",{"critere":text})}  title="Rechercher un film">
         </Button>
     </View>
     
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   image: {
-    height: 200,
-    width:200
+   
   },
 });
