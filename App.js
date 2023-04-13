@@ -69,7 +69,7 @@ export default function App() {
 
 <Tab.Screen 
         name="Panier" 
-        component={PanierView} 
+        component={Panier} 
         options={{
           tabBarLabel: 'Panier',
           tabBarIcon: ({ color, size }) => (
@@ -122,5 +122,17 @@ function Billetterie() {
   <StackBilletterie.Navigator>
     <StackBilletterie.Screen name="Billetterie" component={BilletterieView} />
   </StackBilletterie.Navigator>
+
+  
+  )
+}
+
+function Panier(){
+  const StackPanier = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
+  return (      
+  <StackPanier.Navigator>
+    <StackPanier.Screen name="Panier" component={PanierView} />
+  </StackPanier.Navigator>
   )
 }
