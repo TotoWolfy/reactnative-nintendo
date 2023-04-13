@@ -59,6 +59,7 @@ export default function App() {
   );
 }
 
+
 // -- parie 1 = recherche de films
 function Home() {
   const Stack = createNativeStackNavigator();
