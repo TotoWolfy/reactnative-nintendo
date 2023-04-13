@@ -15,7 +15,7 @@ export default function AccueilView(props) {
           style={styles.input}
           onChangeText={onChangeText}
           value={text}
-          placeholder="citere de recherche"
+          placeholder="citere de recherche UwU"
         />
         {/* bouton pour passer à la vue "Films" en lui donnont le critere saisi */}
         <Button 
