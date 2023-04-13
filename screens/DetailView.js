@@ -31,8 +31,6 @@ if(paramIdProduct){
   </View>  
 );
 }
-
-
 }
 const styles = StyleSheet.create({
   container: {

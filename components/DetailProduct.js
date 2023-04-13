@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { SafeAreaView, ScrollView, Image, StyleSheet, Text } from "react-native";
+import { SafeAreaView, ScrollView, Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 import Product from "../Product";
 
 export default function DetailProduct(props) {
@@ -38,6 +38,9 @@ export default function DetailProduct(props) {
      <Text style={styles.title}>{product.nameProduct}</Text>
      <Text style={styles.price}>Prix {product.price}€</Text>
      <Text style={styles.description}>Description : {product.descriptionProduct}</Text>
+     <TouchableOpacity style={styles.button}>
+              <Text style={styles.buttonText}>Ajouter au panier</Text>
+            </TouchableOpacity>
     </ScrollView>
    </SafeAreaView>
   );
@@ -67,6 +70,19 @@ export default function DetailProduct(props) {
     description: {
         fontSize: 16,
         padding: 10,
+      },
+      button: {
+        backgroundColor: "red",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        marginTop: 10,
+        marginBottom : 70,
+      },
+      buttonText: {
+        color: "white",
+        fontSize: 16,
+        textAlign: "center",
       },
   });
 
