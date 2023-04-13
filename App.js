@@ -10,7 +10,7 @@ import FilmsView from './screens/FilmsView'
 import DetailView from './screens/DetailView'
 import Top10View from './screens/Top10View'
 import ListView from './screens/listView';
-import BilleterieView from './screens/BilletterieView';
+import BilletterieView from './screens/BilletterieView';
 
 // --  navigation principale = TabBar
 export default function App() {
@@ -108,7 +108,7 @@ function Billetterie() {
   const Stack = createNativeStackNavigator();
   return (      
   <StackBilletterie.Navigator>
-    <StackBilletterie.Screen name="Billeterie" component={BilleterieView} />
+    <StackBilletterie.Screen name="Billetterie" component={BilletterieView} />
   </StackBilletterie.Navigator>
   )
 }
