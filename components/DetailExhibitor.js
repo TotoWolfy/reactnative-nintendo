@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import { SafeAreaView, ScrollView, Image, StyleSheet, Text } from "react-native";
-import Event from "../Event";
+import Exhibitor from "../Exhibitor";
 
-export default function DetailEvent(props) {
-  console.log(props.idEvent)
-  const url = "https://cabrol.alwaysdata.net/api/saeEvent/" + props.idEvent 
+export default function DetailExhibitor(props) {
+  console.log(props.idExhibitor)
+  const url = "https://cabrol.alwaysdata.net/api/saeExhibitor/" + props.idExhibitor 
 
   const fetchOptions = { method: "GET" };
 
-  const [event, setEvent] = useState({});
+  const [exhibitor, setExhibitor] = useState({});
  
 
   useEffect(() => {
@@ -17,9 +17,9 @@ export default function DetailEvent(props) {
         return response.json();
       })
       .then((dataJSON) => {
-        let f = new Event(dataJSON)
+        let f = new Exhibitor(dataJSON)
         console.log(f);
-        setEvent(f)
+        setExhibitor(f)
         
       })
       .catch((error) => {
@@ -32,12 +32,15 @@ export default function DetailEvent(props) {
     <ScrollView>
       <Image 
         source={ { 
-            uri : event.photoEv
+            uri : exhibitor.photoExhib
         }} 
         style={styles.image}></Image>
-     <Text style={styles.title}>{event.title}</Text>
-     <Text style={styles.overview}>{event.description}</Text>
-     <Text style={styles.overview}>{event.catNameEv}</Text>
+     <Text style={styles.title}>{exhibitor.pseudo}</Text>
+     <Text style={styles.overview}>téléphone : {exhibitor.phone}</Text>
+     <Text style={styles.overview}>mail : {exhibitor.mail}</Text>
+     <Text style={styles.overview}>Nom : {exhibitor.firstName} {exhibitor.lastName}</Text>
+     <Text style={styles.overview}>Description : {exhibitor.description}</Text>
+     <Text style={styles.overview}>catégorie : {exhibitor.catName}</Text>
     </ScrollView>
    </SafeAreaView>
   );
