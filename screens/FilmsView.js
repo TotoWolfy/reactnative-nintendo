@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
-import FilmsList from '../components/FilmsList';
+import FilmsList from '../components/EventList';
 
 export default function FimsView(props) {
   // -- récupérer le critere saisi dans le formulaire et transmis par le router
