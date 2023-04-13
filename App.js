@@ -31,7 +31,7 @@ export default function App() {
         options={{
           tabBarLabel: 'Accueil',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home-outline" color={color} size={size} />
+            <Ionicons name="home" color={color} size={size} />
           ),
         }}
         />
@@ -41,7 +41,7 @@ export default function App() {
         options={{
           tabBarLabel: 'Map',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="map-outline" color={color} size={size} />
+            <Ionicons name="map" color={color} size={size} />
           ),
         }}
         />
@@ -51,7 +51,7 @@ export default function App() {
         options={{
           tabBarLabel: 'List',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="list-outline" color={color} size={size} />
+            <Ionicons name="list" color={color} size={size} />
           ),
         }}
         />
@@ -76,7 +76,7 @@ function Home() {
   <Stack.Navigator>
     {/* la navigation doit se faire uniquement entre des View*/}
     <Stack.Screen name="Nintendo France Fest " component={AccueilView} />
-    <Stack.Screen name="Liste" component={FilmsView} />
+    <Stack.Screen name="Liste" component={ListView} />
     <Stack.Screen name="Detail" component={DetailView} />
   </Stack.Navigator>
   )
