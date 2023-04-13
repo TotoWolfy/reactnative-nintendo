@@ -2,9 +2,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import { Ionicons } from '@expo/vector-icons';
-
+import { useState } from 'react';
 import AccueilView from './screens/AccueilView'
 import FilmsView from './screens/FilmsView'
 import DetailView from './screens/DetailView'
@@ -12,10 +11,23 @@ import Top10View from './screens/Top10View'
 import ListView from './screens/listView';
 import BilletterieView from './screens/BilletterieView';
 import PanierView from './screens/PanierView';
+import PanierCompo from "./components/PanierCompo";
 
 // --  navigation principale = TabBar
 export default function App() {
   const Tab = createBottomTabNavigator();
+  const [panierCount, setPanierCount] = useState(0);
+
+  function addToCart() {
+    setPanierCount(panierCount + 1);
+  }
+
+  function removeCart() {
+    if (panierCount > 0) {
+      setPanierCount(panierCount - 1);
+    }
+  }
+ 
 
   return (
     <NavigationContainer>
@@ -68,15 +80,17 @@ export default function App() {
         />
 
 <Tab.Screen 
-        name="Panier" 
-        component={Panier} 
-        options={{
-          tabBarLabel: 'Panier',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="cart-outline" color={color} size={size} />
-          ),
-        }}
-        />
+  name="Panier" 
+  component={Panier} 
+  options={{
+    tabBarLabel: 'Panier',
+    tabBarIcon: ({ color, size }) => (
+      <Ionicons name="cart-outline" color={color} size={size} />
+    ),
+    tabBarBadge: panierCount
+  }}
+/>
+
       </Tab.Navigator>
     </NavigationContainer>
   );

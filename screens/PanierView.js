@@ -1,11 +1,12 @@
 
 import { StyleSheet, View, Text } from 'react-native';
-// import ProductList from '../components/ProductList';
+import PanierCompo from '../components/PanierCompo';
 
 export default function PanierView(props) {
   return (
     <View style={styles.container}>
 <Text>Panier</Text>
+<PanierCompo navigation={props.navigation} />
 </View>
     
   );
