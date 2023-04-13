@@ -42,5 +42,6 @@ const styles = StyleSheet.create({
   },
   image: {
    
+  
   },
 });
