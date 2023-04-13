@@ -10,6 +10,7 @@ import FilmsView from './screens/FilmsView'
 import DetailView from './screens/DetailView'
 import Top10View from './screens/Top10View'
 import ListView from './screens/listView';
+import BilleterieView from './screens/BilleterieView';
 
 // --  navigation principale = TabBar
 export default function App() {
@@ -54,6 +55,16 @@ export default function App() {
           ),
         }}
         />
+        <Tab.Screen 
+        name="Store" 
+        component={Store} 
+        options={{
+          tabBarLabel: 'Store',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="logo-euro" color={color} size={size} />
+          ),
+        }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -90,5 +101,14 @@ function Liste() {
     <StackList.Screen name="Liste" component={ListView} />
     <Stack.Screen name="Detail" component={DetailView} />
   </StackList.Navigator>
+  )
+}
+function Store() {
+  const StackStore = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
+  return (      
+  <StackStore.Navigator>
+    <StackStore.Screen name="Billeterie" component={BilleterieView} />
+  </StackStore.Navigator>
   )
 }
