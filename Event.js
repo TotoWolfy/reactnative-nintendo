@@ -4,6 +4,7 @@ class Event {
       this.title = data.title;
       this.catNameEv = data.catNameEv;
       this.photoEv = data.photoEv;
+      this.description = data.description;
     }
   }
   

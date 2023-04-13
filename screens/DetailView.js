@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
-import DetailFilm from '../components/DetailEvent';
+import DetailEvent from '../components/DetailEvent';
 
 export default function DetailView(props) {
   const paramIdEvent  = props.route.params.idEvent;
   return (
     <View style={styles.container}>
-        <DetailFilm idFilm={paramIdEvent}></DetailFilm>
+        <DetailEvent idEvent={paramIdEvent}></DetailEvent>
     </View>  
   );
 }

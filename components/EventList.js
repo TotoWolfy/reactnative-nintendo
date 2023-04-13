@@ -35,10 +35,9 @@ export default function EventsList(props) {
     data={listeEvents}
     keyExtractor={ (Event) => Event.idEvent.toString() }
     renderItem={({item}) => {
-      console.log(item)
         return(
           <TouchableOpacity
-              onPress={ () =>	props.navigation.navigate("Detail", {idEvent:item.idEv})}>
+              onPress={ () =>	props.navigation.navigate("Detail", {idEvent:item.idEvent})}>
 
                 <View style={styles.item}> 
                   <Image 

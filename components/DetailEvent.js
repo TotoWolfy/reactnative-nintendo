@@ -1,19 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import { SafeAreaView, ScrollView, Image, StyleSheet, Text } from "react-native";
-import Film from "../Event";
+import Event from "../Event";
 
-export default function DetailFilm(props) {
-  const apiKey = "af1e1c8f8ad6efb5b326eabaffa38b8a";
-
-  const url = "https://api.themoviedb.org/3/movie/" +
-          props.idEvent + 
-          "?api_key=" +
-          apiKey +
-          "&language=fr"
+export default function DetailEvent(props) {
+  console.log(props.idEvent)
+  const url = "https://cabrol.alwaysdata.net/api/saeEvent/" + props.idEvent 
 
   const fetchOptions = { method: "GET" };
 
-  const [film, setFilm] = useState({});
+  const [event, setEvent] = useState({});
  
 
   useEffect(() => {
@@ -22,9 +17,9 @@ export default function DetailFilm(props) {
         return response.json();
       })
       .then((dataJSON) => {
-        let f = new Film(dataJSON)
+        let f = new Event(dataJSON)
         console.log(f);
-        setFilm(f)
+        setEvent(f)
         
       })
       .catch((error) => {
@@ -37,11 +32,12 @@ export default function DetailFilm(props) {
     <ScrollView>
       <Image 
         source={ { 
-            uri : "https://image.tmdb.org/t/p/w500" + film.poster_path
+            uri : "https://image.tmdb.org/t/p/w500" + event.photoEv
         }} 
         style={styles.image}></Image>
-     <Text style={styles.title}>{film.title}</Text>
-     <Text style={styles.overview}>{film.overview}</Text>
+     <Text style={styles.title}>{event.title}</Text>
+     <Text style={styles.overview}>{event.description}</Text>
+     <Text style={styles.overview}>{event.catNameEv}</Text>
     </ScrollView>
    </SafeAreaView>
   );
