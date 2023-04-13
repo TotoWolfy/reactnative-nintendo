@@ -11,6 +11,7 @@ import DetailView from './screens/DetailView'
 import Top10View from './screens/Top10View'
 import ListView from './screens/listView';
 import BilletterieView from './screens/BilletterieView';
+import PanierView from './screens/PanierView';
 
 // --  navigation principale = TabBar
 export default function App() {
@@ -62,6 +63,17 @@ export default function App() {
           tabBarLabel: 'Billetterie',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="logo-euro" color={color} size={size} />
+          ),
+        }}
+        />
+
+<Tab.Screen 
+        name="Panier" 
+        component={PanierView} 
+        options={{
+          tabBarLabel: 'Panier',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="cart-outline" color={color} size={size} />
           ),
         }}
         />
