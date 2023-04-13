@@ -99,7 +99,7 @@ function Liste() {
   return (      
   <StackList.Navigator>
     <StackList.Screen name="Liste" component={ListView} />
-    <Stack.Screen name="Detail" component={DetailView} />
+    <Stack.Screen name="Détails" component={DetailView} />
   </StackList.Navigator>
   )
 }
