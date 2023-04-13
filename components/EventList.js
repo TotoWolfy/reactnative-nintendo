@@ -22,7 +22,7 @@ export default function EventsList(props) {
   })
   .then(async(dataJSON) => {
    // console.log(dataJSON);
-    sectionComposant = []
+    let sectionComposant = []
     for(categorie of dataJSON){
  
       categorie.data = await fetchEvent(categorie.catNameEv)
