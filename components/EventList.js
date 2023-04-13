@@ -9,13 +9,12 @@ export default function EventsList(props) {
   const url2 = "https://cabrol.alwaysdata.net/api/saeEventCatName/"
   const fetchOptions = { method: "GET" };
 
-  let maSection = []
   const [section, setSection] = useState([]);
 
   const [listeCategories, setCategories] = useState([]);
 
   function  fetchCategorie(){
-  masection = []
+ 
   const maPromesse = new Promise((resolve, reject) => {
     fetch(url, fetchOptions)
   .then((response) => {
