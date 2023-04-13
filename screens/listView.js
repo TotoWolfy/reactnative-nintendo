@@ -1,12 +1,12 @@
 
 import { StyleSheet, View, Text } from 'react-native';
-
+import EventsList from '../components/EventList';
 
 export default function ListView(props) {
   return (
     <View style={styles.container}>  
     <Text>Liste</Text>
-
+    <EventsList {...props}/>
     </View>
     
   );

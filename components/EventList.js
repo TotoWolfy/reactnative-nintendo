@@ -1,30 +1,29 @@
 import { useState, useEffect } from "react";
 import { FlatList, View, Image, StyleSheet, Text, TouchableOpacity } from "react-native";
-import Film from "../Film";
+import Event from "../Event";
 
-export default function FilmsList(props) {
+export default function EventsList(props) {
   const apiKey = "af1e1c8f8ad6efb5b326eabaffa38b8a";
   const url =
-    "https://api.themoviedb.org/3/search/movie?api_key=" +
-    apiKey +
-    "&language=fr-FR&page=1&query=";
+    "https://cabrol.alwaysdata.net/api/saeEvent"
 
   const fetchOptions = { method: "GET" };
 
-  const [listeFilms, setFilms] = useState([]);
+  const [listeEvents, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch(url + props.pcritere, fetchOptions)
+    fetch(url, fetchOptions)
       .then((response) => {
         return response.json();
       })
       .then((dataJSON) => {
        // console.log(dataJSON);
-        let l = [...listeFilms]
-        dataJSON.results.forEach((data)=>{
-          l.push(new Film(data))
+        let l = [...listeEvents]
+        dataJSON.forEach((data)=>{
+          l.push(new Event(data))
         })
-        setFilms(l);
+        setEvents(l);
+      
       })
       .catch((error) => {
         console.log(error);
@@ -33,19 +32,18 @@ export default function FilmsList(props) {
 
   return (
   <FlatList
-    data={listeFilms}
-    keyExtractor={ (film) => film.id.toString() }
+    data={listeEvents}
+    keyExtractor={ (Event) => Event.idEvent.toString() }
     renderItem={({item}) => {
       console.log(item)
         return(
           <TouchableOpacity
-              onPress={ () =>	props.navigation.navigate("Detail", {idFilm:item.id})}>
+              onPress={ () =>	props.navigation.navigate("Detail", {idEvent:item.idEv})}>
 
                 <View style={styles.item}> 
                   <Image 
                         source={ { 
-                            uri : "https://image.tmdb.org/t/p/w500" 
-                                 + item.poster_path
+                            uri : item.photoEv
                             
                         }} 
                         style={styles.image}></Image>
@@ -58,7 +56,7 @@ export default function FilmsList(props) {
       }
     }
     />
-
+  
   );
   }
   const styles = StyleSheet.create({

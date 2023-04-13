@@ -66,7 +66,7 @@ function Home() {
     {/* la navigation doit se faire uniquement entre des View*/}
     <Stack.Screen name="Nintendo France Fest " component={AccueilView} />
     <Stack.Screen name="Liste" component={FilmsView} />
-    <Stack.Screen name="Map" component={DetailView} />
+    <Stack.Screen name="Detail" component={DetailView} />
   </Stack.Navigator>
   )
 }
@@ -81,9 +81,11 @@ function Map() {
 }
 function Liste() {
   const StackList = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
   return (      
   <StackList.Navigator>
-    <StackList.Screen name="Liste" component={Top10View} />
+    <StackList.Screen name="Liste" component={ListView} />
+    <Stack.Screen name="Detail" component={DetailView} />
   </StackList.Navigator>
   )
 }

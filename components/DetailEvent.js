@@ -1,12 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { SafeAreaView, ScrollView, Image, StyleSheet, Text } from "react-native";
-import Film from "../Film";
+import Film from "../Event";
 
 export default function DetailFilm(props) {
   const apiKey = "af1e1c8f8ad6efb5b326eabaffa38b8a";
 
   const url = "https://api.themoviedb.org/3/movie/" +
-          props.idFilm + 
+          props.idEvent + 
           "?api_key=" +
           apiKey +
           "&language=fr"
