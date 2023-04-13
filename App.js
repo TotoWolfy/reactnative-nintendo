@@ -70,6 +70,7 @@ function Home() {
   </Stack.Navigator>
   )
 }
+
 // -- classement des acteurs (le top10...)
 function Map() {
   const StackTop10 = createNativeStackNavigator();
