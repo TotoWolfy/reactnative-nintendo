@@ -7,6 +7,7 @@ export default function PanierView(props) {
     <View style={styles.container}>
 <Text>Panier</Text>
 <PanierCompo navigation={props.navigation} />
+
 </View>
     
   );
