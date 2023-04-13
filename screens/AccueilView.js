@@ -26,7 +26,7 @@ export default function AccueilView(props) {
     
   );
 }
-
+ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
