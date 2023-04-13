@@ -37,7 +37,7 @@ export default function DetailProduct(props) {
         style={styles.image}></Image>
      <Text style={styles.title}>{product.nameProduct}</Text>
      <Text style={styles.price}>Prix {product.price}€</Text>
-     <Text style={styles.overview}>Description : {product.descriptionProduct}</Text>
+     <Text style={styles.description}>Description : {product.descriptionProduct}</Text>
     </ScrollView>
    </SafeAreaView>
   );
@@ -64,7 +64,7 @@ export default function DetailProduct(props) {
         fontSize: 15,
         margin: 5,
       },
-    overview: {
+    description: {
         fontSize: 16,
         padding: 10,
       },
