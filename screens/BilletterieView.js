@@ -1,12 +1,13 @@
 
 import { StyleSheet, View, Text } from 'react-native';
+import ProductList from '../components/ProductList';
 
-
-export default function BilleterieView(props) {
+export default function BilletterieView(props) {
   return (
-    <View style={styles.container}>  
-    <Text>Billeterie</Text>
-    </View>
+    <View style={styles.container}>
+<Text>Billetterie</Text>
+<ProductList navigation={props.navigation} />
+</View>
     
   );
 }
