@@ -14,6 +14,7 @@ import Top10View from './screens/Top10View'
 export default function App() {
   const Tab = createBottomTabNavigator();
 
+  
   return (
     <NavigationContainer>
       <Tab.Navigator
