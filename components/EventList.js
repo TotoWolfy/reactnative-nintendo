@@ -101,8 +101,9 @@ return maPromesse
       renderItem={({item}) => {
         return(
           <TouchableOpacity
+          style={styles.box}
               onPress={ () =>	props.navigation.navigate("Detail", {idEvent:item.idEvent})}>
-
+                
                 <View style={styles.item}> 
                   <Image 
                         source={ { 
@@ -141,7 +142,8 @@ return maPromesse
      // paddingTop: 30,
      // borderRadius: 2,
      // height: 140,
-      flexDirection: 'row'
+    
+      flexWrap: 'wrap',
     },
     image: {
       width: 120,
@@ -149,11 +151,21 @@ return maPromesse
       margin: 5,
       backgroundColor: 'gray'
     },
+    box: {
+      flex:1,
+      flexDirection: 'row'
+    },
     title: {
       fontSize: 20,
+      color: 'red',
+      justifyContent: 'center',
     },
     sectionHeader:{
-      fontSize: 60,
+      fontSize: 45,
+      backgroundColor: 'red',
+      fontWeight: 'bold',
+      color: 'white',
+      marginTop: 30,
     }
   });
 
