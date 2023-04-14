@@ -104,7 +104,7 @@ export default function App() {
 
 
 
-// -- The home page
+
 function Home() {
   const Stack = createNativeStackNavigator();
   return (      
@@ -116,7 +116,7 @@ function Home() {
   )
 }
 
-// -- The map
+// -- classement des acteurs (le Map...)
 function Map() {
   const StackMap = createNativeStackNavigator();
   return (      
