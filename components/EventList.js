@@ -4,14 +4,13 @@ import Event from "../Event";
 import { SectionList } from "react-native";
 
 export default function EventsList(props) {
-  const apiKey = "af1e1c8f8ad6efb5b326eabaffa38b8a";
+
   const url ="https://cabrol.alwaysdata.net/api/saeEventCategorie"
   const url2 = "https://cabrol.alwaysdata.net/api/saeEventCatName/"
   const fetchOptions = { method: "GET" };
 
   const [section, setSection] = useState([]);
 
-  const [listeCategories, setCategories] = useState([]);
 
   function  fetchCategorie(){
  
