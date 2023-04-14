@@ -94,7 +94,7 @@ export default function App() {
       </Tab.Navigator>
     </NavigationContainer>
   );
-}
+
 
 
 // -- parie 1 = recherche de films
@@ -134,9 +134,10 @@ function Liste() {
 function Billetterie() {
   const StackBilletterie = createNativeStackNavigator();
   const Stack = createNativeStackNavigator();
+  
   return (      
   <StackBilletterie.Navigator>
-    <StackBilletterie.Screen name="Billetterie" component={BilletterieView} />
+    <StackBilletterie.Screen name="Billetterie" component={BilletterieView} addToCart={addToCart}/>
     <Stack.Screen name="Detail" component={DetailView} />
   </StackBilletterie.Navigator>
 
@@ -152,4 +153,5 @@ function Panier(){
     <StackPanier.Screen name="Panier" component={PanierView} />
   </StackPanier.Navigator>
   )
+}
 }

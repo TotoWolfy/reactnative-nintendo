@@ -6,7 +6,7 @@ export default function BilletterieView(props) {
   return (
     <View style={styles.container}>
 <Text>Billetterie</Text>
-<ProductList navigation={props.navigation} />
+<ProductList navigation={props.navigation} addToCart={props.addToCart} />
 </View>
     
   );

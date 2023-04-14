@@ -11,16 +11,16 @@ export default function AccueilView(props) {
           source={require('../assets/mario.png')}
         />
       {/* la zone de saisie du critere */}
-        <TextInput
+        {/* <TextInput
           style={styles.input}
           onChangeText={onChangeText}
           value={text}
           placeholder="Critère de recherche"
-        />
+        /> */}
         {/* bouton pour passer à la vue "Films" en lui donnont le critere saisi */}
         <Button 
-          color="#24e082"
-	        onPress={ () =>	props.navigation.navigate("Liste",{"critere":text})}  title="Rechercher un film">
+          color="red"
+	        onPress={ () =>	props.navigation.navigate("Liste",{"critere":text})}  title="Découvrez les évènements et les exposants">
         </Button>
     </View>
     

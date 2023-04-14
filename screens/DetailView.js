@@ -27,7 +27,7 @@ if(paramIdExhibitor){
 if(paramIdProduct){
   return (
     <View style={styles.container}>
-      <DetailProduct idProduct={paramIdProduct}></DetailProduct>
+      <DetailProduct idProduct={paramIdProduct} addToCart={props.addToCart}></DetailProduct>
   </View>  
 );
 }

@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, Image, StyleSheet, Text, TouchableOpacity } f
 import Product from "../Product";
 
 export default function DetailProduct(props) {
-
+  console.log(props.idProduct)
   const url = "https://cabrol.alwaysdata.net/api/saeProduct/" + props.idProduct 
 
   const fetchOptions = { method: "GET" };
@@ -18,7 +18,7 @@ export default function DetailProduct(props) {
       })
       .then((dataJSON) => {
         let f = new Product(dataJSON)
-
+        console.log(f);
         setProduct(f)
         
       })
