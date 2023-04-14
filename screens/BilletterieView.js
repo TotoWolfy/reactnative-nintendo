@@ -11,7 +11,7 @@ export default function BilletterieView(props) {
     
   );
 }
-
+ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
