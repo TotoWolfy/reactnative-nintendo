@@ -153,7 +153,9 @@ function Panier(){
   const Stack = createNativeStackNavigator();
   return (      
   <StackPanier.Navigator>
-    <StackPanier.Screen name="Panier" component={PanierView} />
+    <StackPanier.Screen name="Panier">
+    {(props)=> <PanierView {...props}removeCart={removeCart}></PanierView>}
+    </StackPanier.Screen>
   </StackPanier.Navigator>
   )
 }
