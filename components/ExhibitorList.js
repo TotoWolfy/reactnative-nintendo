@@ -159,12 +159,17 @@ return maPromesse
       justifyContent: 'center',
     },
     sectionHeader:{
-      fontSize: 45,
+      fontSize: 20,
       backgroundColor: 'red',
       fontWeight: 'bold',
       color: 'white',
       marginTop: 30,
-      width: "100%"
+      borderRadius: 10,
+      textAlign: 'center',
+      paddingBottom: 10,
+      paddingTop: 10,
+      marginBottom: 10,
+      width: "100%",
     }
   });
 
