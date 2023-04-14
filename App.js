@@ -7,11 +7,11 @@ import { useState } from 'react';
 import AccueilView from './screens/AccueilView'
 import FilmsView from './screens/FilmsView'
 import DetailView from './screens/DetailView'
-import Top10View from './screens/Top10View'
 import ListView from './screens/listView';
 import BilletterieView from './screens/BilletterieView';
 import PanierView from './screens/PanierView';
 import PanierCompo from "./components/PanierCompo";
+import MapsView from './screens/MapView';
 
 // --  navigation principale = TabBar
 export default function App() {
@@ -115,7 +115,7 @@ function Map() {
   const StackTop10 = createNativeStackNavigator();
   return (      
   <StackTop10.Navigator>
-    <StackTop10.Screen name="Map" component={Top10View} />
+    <StackTop10.Screen name="Map" component={MapsView} />
   </StackTop10.Navigator>
   )
 }
