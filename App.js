@@ -25,7 +25,7 @@ export default function App() {
     // if (newProduct) {
     //   setPanier([...panier, newProduct]);
     setPanierCount(nbproduct =>nbproduct + 1);
-     // }
+    //  }
   }
   
 
