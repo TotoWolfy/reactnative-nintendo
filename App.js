@@ -110,13 +110,14 @@ function Home() {
   )
 }
 
-// -- classement des acteurs (le top10...)
+// -- classement des acteurs (le Map...)
 function Map() {
-  const StackTop10 = createNativeStackNavigator();
+  const StackMap = createNativeStackNavigator();
   return (      
-  <StackTop10.Navigator>
-    <StackTop10.Screen name="Map" component={MapsView} />
-  </StackTop10.Navigator>
+  <StackMap.Navigator>
+    <StackMap.Screen name="Map" component={MapsView} />
+    <StackMap.Screen name="Detail" component={DetailView} />
+  </StackMap.Navigator>
   )
 }
 
