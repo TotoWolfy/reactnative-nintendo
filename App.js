@@ -137,6 +137,7 @@ function Billetterie() {
   return (      
   <StackBilletterie.Navigator>
     <StackBilletterie.Screen name="Billetterie" component={BilletterieView} />
+    <Stack.Screen name="Detail" component={DetailView} />
   </StackBilletterie.Navigator>
 
   
