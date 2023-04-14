@@ -56,42 +56,42 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text3:{
-    color: 'white',
+    color: 'red',
     borderWidth: 3,
     padding: 10,
     borderBottomLeftRadius:20,
     borderTopLeftRadius:20,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     fontWeight: 'bold',
     margin: -1
   },
   text4:{
-    color: 'red',
-    borderWidth: 3,
-    padding: 10,
-    borderBottomRightRadius:20,
-    borderTopRightRadius:20,
-    backgroundColor: 'white',
-    fontWeight: 'bold',
-    margin: -1
-  },
-  text1:{
-    color: 'red',
-    borderWidth: 3,
-    padding: 10,
-    borderBottomLeftRadius:20,
-    borderTopLeftRadius:20,
-    backgroundColor: 'white',
-    fontWeight: 'bold',
-    margin: -1
-  },
-  text2:{
     color: 'white',
     borderWidth: 3,
     padding: 10,
     borderBottomRightRadius:20,
     borderTopRightRadius:20,
     backgroundColor: 'red',
+    fontWeight: 'bold',
+    margin: -1
+  },
+  text1:{
+    color: 'white',
+    borderWidth: 3,
+    padding: 10,
+    borderBottomLeftRadius:20,
+    borderTopLeftRadius:20,
+    backgroundColor: 'red',
+    fontWeight: 'bold',
+    margin: -1
+  },
+  text2:{
+    color: 'red',
+    borderWidth: 3,
+    padding: 10,
+    borderBottomRightRadius:20,
+    borderTopRightRadius:20,
+    backgroundColor: 'white',
     fontWeight: 'bold',
     margin: -1
   },
