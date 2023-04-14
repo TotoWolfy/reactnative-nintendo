@@ -97,7 +97,7 @@ export default function App() {
 }
 
 
-// -- parie 1 = recherche de films
+
 function Home() {
   const Stack = createNativeStackNavigator();
   return (      
@@ -110,7 +110,7 @@ function Home() {
   )
 }
 
-// -- classement des acteurs (le Map...)
+
 function Map() {
   const StackMap = createNativeStackNavigator();
   return (      

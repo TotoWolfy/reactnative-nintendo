@@ -62,7 +62,6 @@ return maPromesse
   useEffect(() => {
    const majSection = async ()=>{
     const data = await fetchCategorie()
-    console.log("ui"+JSON.stringify(data))
     setSection(data)
   } 
    majSection()
