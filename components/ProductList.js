@@ -31,7 +31,7 @@ export default function ProductList(props) {
       keyExtractor={(Product) => Product.idProduct.toString()}
       renderItem={({ item }) => {
         return (
-          <TouchableOpacity addToCart={props.addToCart} onPress={() => props.navigation.navigate("Detail", { idProduct:item.idProduct, addToCart:props.addToCart})}>
+          <TouchableOpacity onPress={() => props.navigation.navigate("Detail", { idProduct:item.idProduct, addToCart:props.addToCart})}>
             <View style={styles.item}>
               <Image source={{ uri: item.imageProduct }} style={styles.image}></Image>
             </View>
