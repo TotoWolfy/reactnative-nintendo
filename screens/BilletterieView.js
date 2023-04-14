@@ -2,6 +2,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import ProductList from '../components/ProductList';
 
 export default function BilletterieView(props) {
+  console.log(props);
   return (
     <View style={styles.container}>
 <Text>Billetterie</Text>

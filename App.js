@@ -137,7 +137,10 @@ function Billetterie() {
   
   return (      
   <StackBilletterie.Navigator>
-    <StackBilletterie.Screen name="Billetterie" component={BilletterieView} addToCart={addToCart}/>
+    <StackBilletterie.Screen name="Billetterie"> 
+    {(props)=> <BilletterieView {...props}addToCart={addToCart}></BilletterieView>}
+    
+    </StackBilletterie.Screen>
     <Stack.Screen name="Detail" component={DetailView} />
   </StackBilletterie.Navigator>
 
