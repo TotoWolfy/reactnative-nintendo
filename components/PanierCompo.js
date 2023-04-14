@@ -9,7 +9,8 @@ export default function PanierCompo(props) {
     </TouchableOpacity>
   );
 }
-    
+   
+
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "red",
