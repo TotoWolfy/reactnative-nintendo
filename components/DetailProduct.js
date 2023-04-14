@@ -38,7 +38,7 @@ export default function DetailProduct(props) {
      <Text style={styles.title}>{product.nameProduct}</Text>
      <Text style={styles.price}>Prix {product.price}€</Text>
      <Text style={styles.description}>Description : {product.descriptionProduct}</Text>
-     <TouchableOpacity style={styles.button} onPress={props.addToCart}>
+     <TouchableOpacity style={styles.button} onClick={() => props.addToCart(product)}>
               <Text style={styles.buttonText}>Ajouter au panier</Text>
             </TouchableOpacity>
     </ScrollView>
