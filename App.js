@@ -18,13 +18,20 @@ export default function App() {
   const Tab = createBottomTabNavigator();
   const [panierCount, setPanierCount]= useState(0);
 
+ 
+
   function addToCart() {
-    setPanierCount(panierCount + 1);
+      // const newProduct = Product.filter(product => product.idProduct === idProduct)[0];
+    // if (newProduct) {
+    //   setPanier([...panier, newProduct]);
+    setPanierCount(nbproduct =>nbproduct + 1);
+     // }
   }
+  
 
   function removeCart() {
     if (panierCount > 0) {
-      setPanierCount(panierCount - 1);
+      setPanierCount(nbproduct => nbproduct - 1);
     }
   }
  
@@ -97,12 +104,11 @@ export default function App() {
 
 
 
-// -- parie 1 = recherche de films
+// -- The home page
 function Home() {
   const Stack = createNativeStackNavigator();
   return (      
   <Stack.Navigator>
-    {/* la navigation doit se faire uniquement entre des View*/}
     <Stack.Screen name="Nintendo France Fest " component={AccueilView} />
     <Stack.Screen name="Liste" component={ListView} />
     <Stack.Screen name="Detail" component={DetailView} />
@@ -110,7 +116,7 @@ function Home() {
   )
 }
 
-// -- classement des acteurs (le top10...)
+// -- The map
 function Map() {
   const StackTop10 = createNativeStackNavigator();
   return (      
@@ -120,6 +126,7 @@ function Map() {
   )
 }
 
+// -- The list with the events and the exhibitors
 function Liste() {
   const StackList = createNativeStackNavigator();
   const Stack = createNativeStackNavigator();
@@ -131,6 +138,7 @@ function Liste() {
   )
 }
 
+// -- The ticketing for buy amazing tickets
 function Billetterie() {
   const StackBilletterie = createNativeStackNavigator();
   const Stack = createNativeStackNavigator();
@@ -148,6 +156,7 @@ function Billetterie() {
   )
 }
 
+// -- The cart
 function Panier(){
   const StackPanier = createNativeStackNavigator();
   const Stack = createNativeStackNavigator();

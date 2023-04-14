@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FlatList, View, Image, StyleSheet, Text, TouchableOpacity } from "react-native";
+import Product from "../Product";
 
 export default function PanierCompo(props) {
         
@@ -9,8 +10,7 @@ export default function PanierCompo(props) {
     </TouchableOpacity>
   );
 }
-   
-
+    
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "red",
