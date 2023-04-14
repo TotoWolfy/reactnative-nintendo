@@ -17,6 +17,8 @@ export default function AccueilView(props) {
           value={text}
           placeholder="Critère de recherche"
         /> */}
+
+
         {/* bouton pour passer à la vue "Films" en lui donnont le critere saisi */}
         <Button 
           color="red"

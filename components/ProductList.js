@@ -31,14 +31,14 @@ export default function ProductList(props) {
       keyExtractor={(Product) => Product.idProduct.toString()}
       renderItem={({ item }) => {
         return (
-          <TouchableOpacity addToCart={props.addToCart} onPress={() => props.navigation.navigate("Detail", { idProduct:item.idProduct })}>
+          <TouchableOpacity addToCart={props.addToCart} onPress={() => props.navigation.navigate("Detail", { idProduct:item.idProduct, addToCart:props.addToCart})}>
             <View style={styles.item}>
               <Image source={{ uri: item.imageProduct }} style={styles.image}></Image>
             </View>
             <View style={styles.item}>
               <Text style={styles.nameProduct}>{item.nameProduct}</Text>
             </View>
-            <TouchableOpacity style={styles.button} addToCart={props.addToCart} onPress={() => props.navigation.navigate("Detail", { idProduct:item.idProduct })}>
+            <TouchableOpacity style={styles.button}  onPress={() => props.navigation.navigate("Detail", { idProduct:item.idProduct, addToCart:props.addToCart})}>
               <Text style={styles.buttonText}>En savoir plus</Text>
             </TouchableOpacity>
           </TouchableOpacity>

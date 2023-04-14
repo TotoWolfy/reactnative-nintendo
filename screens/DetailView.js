@@ -7,7 +7,8 @@ export default function DetailView(props) {
   const paramIdEvent  = props.route.params.idEvent;
   const paramIdExhibitor = props.route.params.idExhibitor;
   const paramIdProduct = props.route.params.idProduct;
-  console.log(paramIdEvent, paramIdExhibitor, paramIdProduct)
+  const paramAddToCart = props.route.params.addToCart;
+  console.log(paramIdEvent, paramIdExhibitor, paramIdProduct, paramAddToCart)
   if(paramIdEvent){
 
     return (
@@ -27,7 +28,7 @@ if(paramIdExhibitor){
 if(paramIdProduct){
   return (
     <View style={styles.container}>
-      <DetailProduct idProduct={paramIdProduct} addToCart={props.addToCart}></DetailProduct>
+      <DetailProduct idProduct={paramIdProduct} addToCart={paramAddToCart}></DetailProduct>
   </View>  
 );
 }

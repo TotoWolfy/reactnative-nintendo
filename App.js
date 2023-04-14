@@ -16,7 +16,7 @@ import PanierCompo from "./components/PanierCompo";
 // --  navigation principale = TabBar
 export default function App() {
   const Tab = createBottomTabNavigator();
-  const [panierCount, setPanierCount] = useState(0);
+  const [panierCount, setPanierCount]= useState(0);
 
   function addToCart() {
     setPanierCount(panierCount + 1);
